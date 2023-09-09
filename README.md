@@ -97,6 +97,24 @@ y como podemos ver, se guarda correctamente la reservacion con su respectivo hue
 
    
 
+
+   Ya vimos como Crear y Actualizar informacion, ahora vamos a eliminar una reservación. Este programa cuenta con una eliminacion en cascada,
+   es decir, al momento de eliminar una reservacion, en automatico tambien se elimina el huesped que estaba vinculado con esa reservacion. 
+
+   -   Primero seleccione la reservacion a eliminar dando click.
+   -   
+      ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/8f2b0d47-8565-42db-a0bb-f675e6f7c0bc)
+   
+   -   El campo debe cambiar de color a un tono azulado, ahora precione el boton "Eliminar"
+     
+   ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/ce64b169-1242-4a4b-b746-3796929e2689)
+
+   Y ambos campos se eliminaran de la base de datos y de la tabla de la aplicación
+
+
+     
+      
+
    
 
 
