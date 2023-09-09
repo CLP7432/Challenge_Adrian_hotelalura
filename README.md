@@ -6,6 +6,8 @@ Recuerda activar mysql y apache en caso de usar Xampp
 ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/ca0e8380-fdf8-4419-8b0e-382442b102d3)
 
 
+Despues recuerda pegar en SQL la query proporcionada anteriormente
+
 ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/751d3ca0-9097-43b0-a753-f83e1ff9e80a)
 
 
@@ -23,8 +25,48 @@ A continuación, le indicamos los pasos a seguir para importar el proyecto Java 
 
 2. Una vez realizados los cambios en el "Connection Factory", estará listo para ejecutar el programa. Para ello, diríjase al paquete `com.latam.alura.main` y ejecute el método principal. La aplicación estará completamente configurada y lista para su uso.
 
+   ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/1fe46040-3556-434c-9053-c37741d1bc2a)
+
+
 4. No olvide iniciar sesión utilizando las siguientes credenciales:
    - **Usuario:** "admin"
    - **Contraseña:** "admin"
+  
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/4294e383-0248-420b-9b1d-d36b300d3105)
+
+
+Una vez entrado al menu principal ya podemos empezar a hacer operaciones en la aplicacion. por ejemplo creemos una nueva reservación.
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/d269c096-9484-432c-b813-2ffb40b92d2b)
+
+
+(nota) hay condiciones a la hora de crear una reservacion. por ejemplo:
+   -   La fecha de incio no puede ser un dia anterior a la fecha que usted se encuentra actualmente, lo mismo aplica para la fecha de salida
+   -   La fecha de salida no puede ser igual a la fecha de inicio
+   -   Ningun campo puede estar vacio
+
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/a91486e1-07cb-4680-a09c-cbc0251ac715)
+
+
+Cuando creamos una reservación en hotel alura tambien es necesario crear un huesped que ocupe esa reservacion, asi que una vez llenado los datos de la reservación y darle al boton azul, nos 
+enviara a un formaulario para llenar los datos del huesped
+
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/05b737f8-a79e-4726-ac69-4348e7699610)
+
+si al concluir de llenar los datos y de enviar el formulario todo fue exitosos, nos saltara una ventada como la siguiente, que indicara que los datos se guardaron en la base de datos con exito
+
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/95e87156-a5bb-4c2d-a3aa-989c4fc84629)
+
+ahora vamos a revisar si realemente se guardo la reservacion en la tabla
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/4e63d4c5-4c5f-4125-9bc6-1509952840cc)
+
+y como podemos ver, se guarda correctamente la reservacion con su respectivo huesped
+
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/66b49138-5591-4249-b5d1-1e585f954eb1)
+
+![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/4686ab7e-4754-47d5-b1f4-20627e485ee1)
+
+
+
+
 
 Estas instrucciones asegurarán una instalación exitosa y una configuración óptima para la aplicación Hotel Alura. ¡Disfrute de todas sus funciones y características!
