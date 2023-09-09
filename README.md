@@ -1,5 +1,71 @@
 # Instrucciones de Instalación de la Base de Datos para Hotel Alura
 
+
+-- Crear la base de datos
+CREATE DATABASE `hotelalura`;
+
+-- Usar la base de datos
+USE `hotelalura`;
+
+-- Crear la tabla `usuario`
+CREATE TABLE `usuario` (
+  `nombre` VARCHAR(50) DEFAULT NULL,
+  `contraseña` VARCHAR(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- Insertar un usuario de ejemplo
+INSERT INTO `usuario` (`nombre`, `contraseña`) VALUES
+('admin', 'admin');
+
+-- Crear la tabla `huesped`
+CREATE TABLE `huesped` (
+  `id` INT(11) NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
+  `apellido` VARCHAR(50) NOT NULL,
+  `fecha_nacimiento` DATE DEFAULT NULL,
+  `nacionalidad` VARCHAR(50) DEFAULT NULL,
+  `telefono` VARCHAR(12) DEFAULT NULL,
+  `id_reserva` INT(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+
+
+-- Crear la tabla `reservas`
+CREATE TABLE `reservas` (
+  `id_reservas` INT(11) NOT NULL,
+  `fecha_entrada` DATE DEFAULT NULL,
+  `fecha_salida` DATE DEFAULT NULL,
+  `valor` FLOAT DEFAULT NULL,
+  `forma_pago` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- Crear índices
+-- Índices de la tabla `huesped`
+ALTER TABLE `huesped`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_reserva` (`id_reserva`);
+
+-- Índices de la tabla `reservas`
+ALTER TABLE `reservas`
+  ADD PRIMARY KEY (`id_reservas`);
+
+-- Configurar AUTO_INCREMENT
+-- AUTO_INCREMENT de la tabla `huesped`
+ALTER TABLE `huesped` MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+-- AUTO_INCREMENT de la tabla `reservas`
+ALTER TABLE `reservas` MODIFY `id_reservas` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+-- Restricciones
+-- Filtros para la tabla `huesped`
+ALTER TABLE `huesped`
+  ADD CONSTRAINT `fk_id_reserva` FOREIGN KEY (`id_reserva`) REFERENCES `reservas` (`id_reservas`) ON DELETE CASCADE,
+  ADD CONSTRAINT `huesped_ibfk_1` FOREIGN KEY (`id_reserva`) REFERENCES `reservas` (`id_reservas`),
+  ADD CONSTRAINT `id_reserva` FOREIGN KEY (`id_reserva`) REFERENCES `reservas` (`id_reservas`) ON DELETE CASCADE;
+
+-- Fin del script
+
+
 Antes de ejecutar la aplicación Hotel Alura, es fundamental crear la base de datos correspondiente. Para facilitar este proceso, hemos proporcionado la siguiente consulta SQL que puede ejecutar en su administrador de bases de datos favorito, ya sea Workbench o mediante phpMyAdmin. Simplemente copie y pegue el siguiente código en su administrador y proceda a ejecutarlo:
 
 Recuerda activar mysql y apache en caso de usar Xampp
