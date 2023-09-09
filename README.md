@@ -66,7 +66,38 @@ y como podemos ver, se guarda correctamente la reservacion con su respectivo hue
 ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/4686ab7e-4754-47d5-b1f4-20627e485ee1)
 
 
+¿No te llamas asi?, no hay problema, el sistema cuenta con una funcionalidad de poder modificar los siguientes atributos de cada registro:
+   Reservacion:
+      -  Fecha de Salida
+      -   Forma de pago
+   Huespedes:  
+      -   Nombre
+      -   Apellido
+      -   Fecha de nacimiento
+      -   Nacionalidad
+      -   Telefono
 
+   Basta con dar doble cick en el campo a modificar y cambiar el valor, despues precionar la tecla "Enter" y por ultimo dar click en el botn de "Modificar"
+
+   Cambiemos el nombre de "Marco" por "Adrian"
+
+   ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/e585daa8-d91b-44c9-8bd7-2ee735bc0e4c)
+
+   Despues de precionar "Enter" y dar Click en "Modificar"
+   
+   ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/63a63085-5563-43bf-a056-860d07830027)
+
+   Y el campo ha sido modificado con exito.
+   
+   ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/55d61cce-24c7-4beb-a08e-f120f3922306)
+
+   Veamos si realmente se ah cambiado en la base de datos
+
+   ![image](https://github.com/CLP7432/Challenge_Adrian_hotelalura/assets/121730557/60e3081d-7841-4b68-8b1d-8758d0976965)
+
+   
+
+   
 
 
 Estas instrucciones asegurarán una instalación exitosa y una configuración óptima para la aplicación Hotel Alura. ¡Disfrute de todas sus funciones y características!
